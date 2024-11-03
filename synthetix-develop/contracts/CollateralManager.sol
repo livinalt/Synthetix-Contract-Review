@@ -4,7 +4,7 @@ pragma solidity ^0.5.16;
 import "./Owned.sol";
 import "./Pausable.sol";
 import "./MixinResolver.sol";
-import "./ICollateralManager.sol";
+import "./interfaces/ICollateralManager.sol";
 
 // Libraries
 import "./AddressSetLib.sol";
@@ -13,10 +13,10 @@ import "./SafeDecimalMath.sol";
 
 // Internal references
 import "./CollateralManagerState.sol";
-import "./IIssuer.sol";
-import "./IExchangeRates.sol";
-import "./IERC20.sol";
-import "./ISynth.sol";
+import "./interfaces/IIssuer.sol";
+import "./interfaces/IExchangeRates.sol";
+import "./interfaces/IERC20.sol";
+import "./interfaces/ISynth.sol";
 
 contract CollateralManager is ICollateralManager, Owned, Pausable, MixinResolver {
     /* ========== LIBRARIES ========== */
